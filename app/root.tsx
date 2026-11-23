@@ -88,12 +88,12 @@ export default function App() {
   }
 
   return (
-      <main className="min-h-scr een bg-background text-foreground relative z-10">
+      <main className="min-h-screen bg-background text-foreground relative z-10">
       <Outlet
       context={{
         authState, refreshAuth, signIn, signOut
       }}
-      />;
+      />
       </main>
         )
 }
