@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="eb25a08c-4517-4138-b06d-ce88177127e2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/Button.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/puter.action.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/type.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000566083713325" />
+      <entry key="S2" value="1.1057601142921216" />
+      <entry key="S5" value="1.5811853258153459" />
+      <entry key="S10" value="2.067396502415767" />
+      <entry key="S30" value="2.999843897393225" />
+      <entry key="S60" value="5.167699035764425" />
+      <entry key="M2" value="10.045606921675102" />
+      <entry key="M5" value="22.002549282548006" />
+      <entry key="M10" value="38.14860928614442" />
+      <entry key="M15" value="53.0869182006847" />
+      <entry key="M30" value="88.98431434590726" />
+      <entry key="H1" value="132.72585091846972" />
+      <entry key="H2" value="177.58246349735077" />
+      <entry key="H4" value="214.5303785699086" />
+      <entry key="D1" value="259.0053922699362" />
+      <entry key="W1" value="268.37856966904207" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="1.8009530984671453E-74" />
+      <entry key="S2" value="3.980951757129779E-19" />
+      <entry key="S5" value="5.8101571736595626E-8" />
+      <entry key="S10" value="3.323727889121109E-4" />
+      <entry key="S30" value="0.12223201752360906" />
+      <entry key="S60" value="0.6623058139120456" />
+      <entry key="M2" value="1.9338311758966535" />
+      <entry key="M5" value="5.190942358668753" />
+      <entry key="M10" value="9.122977866312363" />
+      <entry key="M15" value="11.937564101191793" />
+      <entry key="M30" value="17.09527928479502" />
+      <entry key="H1" value="22.711759554061615" />
+      <entry key="H2" value="28.931375856177464" />
+      <entry key="H4" value="34.41193569573886" />
+      <entry key="D1" value="41.273696145606166" />
+      <entry key="W1" value="42.74481975688684" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.7791645796604998" />
+      <entry key="MS500" value="0.9513728402271481" />
+      <entry key="S2" value="1.0839156001373684" />
+      <entry key="S5" value="1.5305499421740945" />
+      <entry key="S10" value="2.0121999128429735" />
+      <entry key="S30" value="3.0807939217592106" />
+      <entry key="S60" value="5.771253412205815" />
+      <entry key="M2" value="11.88584413577602" />
+      <entry key="M5" value="27.076864910902735" />
+      <entry key="M10" value="47.1526111510893" />
+      <entry key="M15" value="64.91071024726035" />
+      <entry key="M30" value="105.98949325074693" />
+      <entry key="H1" value="155.37646771705357" />
+      <entry key="H2" value="206.47597722572925" />
+      <entry key="H4" value="248.92054202410344" />
+      <entry key="D1" value="300.2749076490425" />
+      <entry key="W1" value="311.1227758126396" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3MUuIMNTSK7pxTcwtb5EwhgmiHs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "main",
+    "javascript.preferred.runtime.type.id": "node",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Users\\$0nY\\WebstormProjects\\planova\\node_modules\\typescript\\lib"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\$0nY\WebstormProjects\planova" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-56aff7b04f6f-JavaScript-WS-263.7307.202" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eb25a08c-4517-4138-b06d-ce88177127e2" name="Changes" comment="" />
+      <created>1795417387555</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1795417387555</updated>
+      <workItem from="1795417388793" duration="9999000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
