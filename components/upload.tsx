@@ -24,8 +24,8 @@ const Upload = ({onComplete}: {onComplete?: (data: string) => void}) => {
 
     return () => {
       readerRef.current?.abort();
-      if (intervalRef.current) clearInterval(intervalRef.current);
-      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      if (intervalRef.current !== null) clearInterval(intervalRef.current);
+      if (timeoutRef.current !== null) clearTimeout(timeoutRef.current);
       readerRef.current = null;
       intervalRef.current = null;
       timeoutRef.current = null;
@@ -34,10 +34,11 @@ const Upload = ({onComplete}: {onComplete?: (data: string) => void}) => {
 
   const processFile = (selectedFile: File) => {
     if (!isSignedIn) return;
+    if (!selectedFile.type.startsWith('image/')) return;
     if (selectedFile.size > 10 * 1024 * 1024) return;
     readerRef.current?.abort();
-    if (intervalRef.current) clearInterval(intervalRef.current);
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    if (intervalRef.current !== null) clearInterval(intervalRef.current);
+    if (timeoutRef.current !== null) clearTimeout(timeoutRef.current);
     intervalRef.current = null;
     timeoutRef.current = null;
 
@@ -56,9 +57,13 @@ const Upload = ({onComplete}: {onComplete?: (data: string) => void}) => {
         currentProgress = Math.min(currentProgress + PROGRESS_STEP, 100);
         setProgress(currentProgress);
         if (currentProgress === 100) {
-          if (intervalRef.current) clearInterval(intervalRef.current);
+          if (intervalRef.current !== null) clearInterval(intervalRef.current);
           intervalRef.current = null;
-          timeoutRef.current = setTimeout(() => onComplete?.(data), REDIRECT_DELAY_MS);
+          if (timeoutRef.current !== null) clearTimeout(timeoutRef.current);
+          timeoutRef.current = setTimeout(() => {
+            timeoutRef.current = null;
+            onComplete?.(data);
+          }, REDIRECT_DELAY_MS);
         }
       }, PROGRESS_INTERVAL_MS);
     };
@@ -91,7 +96,7 @@ const Upload = ({onComplete}: {onComplete?: (data: string) => void}) => {
         <div className="upload">
             {!file ? (
                 <div className={`dropzone ${isDragging ? 'is-dragging' : ''}`} onDragOver={handleDragOver} onDragLeave={handleDragLeave} onDrop={handleDrop}>
-                    <input type="file" className="drop-input" accept=".jpg,.jpeg,.png" disabled={!isSignedIn} onChange={handleChange} />
+                    <input type="file" className="drop-input" accept="image/*" disabled={!isSignedIn} onChange={handleChange} />
 
                     <div className="drop-content">
                         <div className="drop-icon">
