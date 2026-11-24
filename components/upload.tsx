@@ -33,7 +33,13 @@ const Upload = ({onComplete}: {onComplete?: (data: string) => void}) => {
   }, [isSignedIn]);
 
   const processFile = (selectedFile: File) => {
-    if (!isSignedIn || readerRef.current?.readyState === FileReader.LOADING || intervalRef.current) return;
+    if (!isSignedIn) return;
+    if (selectedFile.size > 10 * 1024 * 1024) return;
+    readerRef.current?.abort();
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    intervalRef.current = null;
+    timeoutRef.current = null;
 
     setFile(selectedFile);
     setProgress(0);
