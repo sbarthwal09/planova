@@ -21,81 +21,81 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "sbarthwal09"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;sbarthwal09&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/sbarthwal09/planova.git",
-    "accountId": "307e4201-b38a-470f-9f81-40612f8dc1b9"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/sbarthwal09/planova.git&quot;,
+    &quot;accountId&quot;: &quot;307e4201-b38a-470f-9f81-40612f8dc1b9&quot;
   }
-}]]></component>
+}</component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0875557798375362" />
-      <entry key="MS500" value="2.0543898959999556" />
-      <entry key="S2" value="2.7038928342292925" />
-      <entry key="S5" value="3.050294799796668" />
-      <entry key="S10" value="3.9604248309285612" />
-      <entry key="S30" value="6.306003264948363" />
-      <entry key="S60" value="7.490064869187844" />
-      <entry key="M2" value="9.35984995900423" />
-      <entry key="M5" value="19.625931858529746" />
-      <entry key="M10" value="34.111941746285225" />
-      <entry key="M15" value="44.55242274293291" />
-      <entry key="M30" value="72.56121036424892" />
-      <entry key="H1" value="130.12402370395694" />
-      <entry key="H2" value="227.465200001516" />
-      <entry key="H4" value="353.21152102545426" />
-      <entry key="D1" value="590.4959118019592" />
-      <entry key="W1" value="656.0347772537156" />
+      <entry key="MS100" value="1.4765078523611584E-53" />
+      <entry key="MS500" value="2.7154834015233688E-11" />
+      <entry key="S2" value="0.0022946115757750277" />
+      <entry key="S5" value="0.10139529975672469" />
+      <entry key="S10" value="0.5128159945165226" />
+      <entry key="S30" value="3.0889329013900926" />
+      <entry key="S60" value="6.818123575568973" />
+      <entry key="M2" value="11.81634760472353" />
+      <entry key="M5" value="17.943426149644253" />
+      <entry key="M10" value="22.375380922176994" />
+      <entry key="M15" value="25.27885690520637" />
+      <entry key="M30" value="30.948188776391547" />
+      <entry key="H1" value="46.92285759868052" />
+      <entry key="H2" value="108.20341449575409" />
+      <entry key="H4" value="269.25547650572463" />
+      <entry key="D1" value="888.3229492613759" />
+      <entry key="W1" value="1142.4300840393314" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="1.908660377085259E-173" />
-      <entry key="S5" value="8.171659821515632E-70" />
-      <entry key="S10" value="2.8773662223268177E-35" />
-      <entry key="S30" value="3.660424675451996E-12" />
-      <entry key="S60" value="2.755547032654433E-6" />
-      <entry key="M2" value="0.002985688266476256" />
-      <entry key="M5" value="0.24393426488122447" />
-      <entry key="M10" value="1.200407645524872" />
-      <entry key="M15" value="2.3730783985382042" />
-      <entry key="M30" value="7.438251291070286" />
-      <entry key="H1" value="20.05912332038415" />
-      <entry key="H2" value="40.863440047096645" />
-      <entry key="H4" value="65.66597007749833" />
-      <entry key="D1" value="109.23632519471" />
-      <entry key="W1" value="120.88512749030484" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0000007467125882" />
+      <entry key="S5" value="1.0036036904971954" />
+      <entry key="S10" value="1.0680656626959792" />
+      <entry key="S30" value="1.6790846014903864" />
+      <entry key="S60" value="2.370656253401351" />
+      <entry key="M2" value="3.0061602132104297" />
+      <entry key="M5" value="3.618640509494171" />
+      <entry key="M10" value="4.283301218266284" />
+      <entry key="M15" value="4.859444169713596" />
+      <entry key="M30" value="6.008798130405718" />
+      <entry key="H1" value="8.030645430539677" />
+      <entry key="H2" value="14.525264753545489" />
+      <entry key="H4" value="34.16794866398101" />
+      <entry key="D1" value="123.34785210859489" />
+      <entry key="W1" value="162.19169226140937" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.0133356761793382" />
-      <entry key="MS500" value="1.9870972195672858" />
-      <entry key="S2" value="2.6764464371904" />
-      <entry key="S5" value="3.037688673627907" />
-      <entry key="S10" value="3.9528470331958365" />
-      <entry key="S30" value="6.302478620833802" />
-      <entry key="S60" value="7.488060059794509" />
-      <entry key="M2" value="9.361545733170667" />
-      <entry key="M5" value="19.864552587978828" />
-      <entry key="M10" value="35.30023889318351" />
-      <entry key="M15" value="46.9100232461752" />
-      <entry key="M30" value="79.97724438157734" />
-      <entry key="H1" value="150.15481078486422" />
-      <entry key="H2" value="268.29908329838156" />
-      <entry key="H4" value="418.8523099065974" />
-      <entry key="D1" value="699.7246985480338" />
-      <entry key="W1" value="776.9186955841532" />
+      <entry key="MS100" value="0.0013156577899079006" />
+      <entry key="MS500" value="0.2653558022537977" />
+      <entry key="S2" value="0.7197457092065148" />
+      <entry key="S5" value="0.9744324840482912" />
+      <entry key="S10" value="1.4859685150771234" />
+      <entry key="S30" value="4.638699938722985" />
+      <entry key="S60" value="9.055927646198283" />
+      <entry key="M2" value="14.71615488634952" />
+      <entry key="M5" value="21.50159163120576" />
+      <entry key="M10" value="26.62183011647167" />
+      <entry key="M15" value="30.110742858241828" />
+      <entry key="M30" value="36.940280067808885" />
+      <entry key="H1" value="54.941257123581934" />
+      <entry key="H2" value="122.71569798164259" />
+      <entry key="H4" value="303.40773403169464" />
+      <entry key="D1" value="1011.6615230508271" />
+      <entry key="W1" value="1304.62003394158" />
     </decayedShown>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3MUuIMNTSK7pxTcwtb5EwhgmiHs" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -105,6 +105,7 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "git-widget-placeholder": "'upload-files'",
     "javascript.preferred.runtime.type.id": "node",
@@ -115,7 +116,7 @@
     "node.js.selected.package.jshint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\$0nY\\WebstormProjects\\planova\\node_modules\\typescript\\lib"
+    "ts.external.directory.path": "C:\\Programs\\WebStorm 2026.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -138,6 +139,7 @@
       <option name="presentableId" value="Default" />
       <updated>1795417387555</updated>
       <workItem from="1795417388793" duration="22779000" />
+      <workItem from="1795498099388" duration="13369000" />
     </task>
     <servers />
   </component>

@@ -8,7 +8,7 @@ const Navbar = () => {
         signIn: () => Promise<boolean>;
         signOut: () => Promise<boolean>;
     }>();
-    const {isSignedIn, username} = authState;
+    const {isSignedIn, userName} = authState;
 
     const handleAuthClick = async () => {
         if(isSignedIn){
@@ -51,7 +51,7 @@ const Navbar = () => {
                     {isSignedIn ? (
                         <>
                         <span className="greeting">
-                            {username ? `Hi, ${username}` : 'Signed in'}
+                            {userName ? `Hi, ${userName}` : 'Signed in'}
                         </span>
                             <Button size="sm" onClick={handleAuthClick} className="btn">
                                 Log out
