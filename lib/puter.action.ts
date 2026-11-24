@@ -16,6 +16,13 @@ export const getCurrentUser = async () => {
     }
 };
 
+export const listProjects = async (): Promise<DesignItem[]> => {
+    const records = await puter.kv.list<DesignItem>(`${PROJECT_KEY_PREFIX}*`, true);
+    return records.map(({ value }) => value).filter((item): item is DesignItem =>
+        !!item && typeof item.id === "string" && typeof item.sourceImage === "string" && typeof item.timestamp === "number",
+    ).sort((a, b) => b.timestamp - a.timestamp);
+};
+
 export const createProject = async ({
     item,
     visibility = "private",
