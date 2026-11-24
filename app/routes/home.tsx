@@ -1,11 +1,11 @@
 import type { Route } from "./+types/home";
-import { useState } from "react";
-import { Link, useNavigate } from "react-router";
+import { useEffect, useState } from "react";
+import { Link, useNavigate, useOutletContext } from "react-router";
 import { ArrowRight, ArrowUpRight, Clock, Layers } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Button from "../../components/ui/Button";
 import Upload from "../../components/upload";
-import { createProject } from "../../lib/puter.action";
+import { createProject, listProjects } from "../../lib/puter.action";
 
 export function meta({}: Route.MetaArgs) {
     return [
@@ -17,7 +17,7 @@ export function meta({}: Route.MetaArgs) {
     ];
 }
 
-const getVisualizerState = (project: DesignItem): VisualizerLocationState => ({
+export const getVisualizerState = (project: DesignItem): VisualizerLocationState => ({
     initialImage: project.sourceImage,
     initialRender: project.renderedImage ?? null,
     name: project.name,
@@ -26,6 +26,21 @@ const getVisualizerState = (project: DesignItem): VisualizerLocationState => ({
 export default function Home() {
     const navigate = useNavigate();
     const [projects, setProjects] = useState<DesignItem[]>([]);
+    const {authState} = useOutletContext<{authState: AuthState}>();
+
+    useEffect(() => {
+        let active = true;
+        setProjects([]);
+        if (authState.isSignedIn) {
+            listProjects().then((saved) => {
+                if (active) setProjects((current) => [
+                    ...current,
+                    ...saved.filter((item) => !current.some((project) => project.id === item.id)),
+                ]);
+            }).catch((error) => console.error("Failed to load projects", error));
+        }
+        return () => { active = false; };
+    }, [authState.isSignedIn, authState.userId]);
 
     const handleUploadComplete = async (base64: string): Promise<boolean> => {
         const newId = Date.now().toString();
@@ -123,10 +138,10 @@ export default function Home() {
                                 </div>
                             </Link>
                         ))}
-                        {projects.map(({id, name, renderImage, sourceImage, timestamp}) =>(
-                            <div className="project-card group">
+                        {projects.map(({id, name, renderedImage, sourceImage, timestamp}) =>(
+                            <div key={id} className="project-card group">
                             <div className="preview">
-                            <img src={renderImage || sourceImage} alt="Project" />
+                            <img src={renderedImage || sourceImage} alt="Project" />
                             <div className="badge">
                             <span>Community</span>
                             </div>
@@ -136,7 +151,7 @@ export default function Home() {
                             <h3>{name}</h3>
                             <div className="meta">
                             <Clock size={12} />
-                    <span>{new Date({timestamp}).toLocaleDateString()}</span>
+                    <span>{new Date(timestamp).toLocaleDateString()}</span>
                     <span>By baby</span>
                 </div>
         </div>

@@ -4,13 +4,15 @@ import {useOutletContext} from "react-router";
 import {CheckCircle2, ImageIcon, UploadIcon} from "lucide-react";
 import {PROGRESS_INTERVAL_MS, PROGRESS_STEP, REDIRECT_DELAY_MS} from "../lib/constants";
 
-const Upload = ({onComplete}: {onComplete?: (data: string) => void}) => {
+const Upload = ({onComplete}: {onComplete?: (data: string) => Promise<boolean | void> | boolean | void}) => {
   const [file, setFile] = useState<File | null>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [error, setError] = useState<string | null>(null);
   const readerRef = useRef<FileReader | null>(null);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const attemptRef = useRef(0);
 
   const {authState} = useOutletContext<{ authState: AuthState }>();
   const {isSignedIn} = authState;
@@ -20,9 +22,11 @@ const Upload = ({onComplete}: {onComplete?: (data: string) => void}) => {
       setFile(null);
       setProgress(0);
       setIsDragging(false);
+      setError(null);
     }
 
     return () => {
+      attemptRef.current += 1;
       readerRef.current?.abort();
       if (intervalRef.current !== null) clearInterval(intervalRef.current);
       if (timeoutRef.current !== null) clearTimeout(timeoutRef.current);
@@ -36,6 +40,7 @@ const Upload = ({onComplete}: {onComplete?: (data: string) => void}) => {
     if (!isSignedIn) return;
     if (!selectedFile.type.startsWith('image/')) return;
     if (selectedFile.size > 10 * 1024 * 1024) return;
+    const attempt = ++attemptRef.current;
     readerRef.current?.abort();
     if (intervalRef.current !== null) clearInterval(intervalRef.current);
     if (timeoutRef.current !== null) clearTimeout(timeoutRef.current);
@@ -44,6 +49,7 @@ const Upload = ({onComplete}: {onComplete?: (data: string) => void}) => {
 
     setFile(selectedFile);
     setProgress(0);
+    setError(null);
     const reader = new FileReader();
     readerRef.current = reader;
     reader.onload = () => {
@@ -60,9 +66,18 @@ const Upload = ({onComplete}: {onComplete?: (data: string) => void}) => {
           if (intervalRef.current !== null) clearInterval(intervalRef.current);
           intervalRef.current = null;
           if (timeoutRef.current !== null) clearTimeout(timeoutRef.current);
-          timeoutRef.current = setTimeout(() => {
+          timeoutRef.current = setTimeout(async () => {
             timeoutRef.current = null;
-            onComplete?.(data);
+            try {
+              if (await onComplete?.(data) !== false) return;
+            } catch (error) {
+              console.error('Failed to complete upload', error);
+            }
+            if (attempt === attemptRef.current) {
+              setFile(null);
+              setProgress(0);
+              setError('Upload failed. Please try again.');
+            }
           }, REDIRECT_DELAY_MS);
         }
       }, PROGRESS_INTERVAL_MS);
@@ -94,6 +109,7 @@ const Upload = ({onComplete}: {onComplete?: (data: string) => void}) => {
 
     return (
         <div className="upload">
+            {error && <p role="alert">{error}</p>}
             {!file ? (
                 <div className={`dropzone ${isDragging ? 'is-dragging' : ''}`} onDragOver={handleDragOver} onDragLeave={handleDragLeave} onDrop={handleDrop}>
                     <input type="file" className="drop-input" accept="image/*" disabled={!isSignedIn} onChange={handleChange} />

@@ -1,8 +1,12 @@
-import {useLocation} from "react-router";
+import {Link, useLocation} from "react-router";
 
 const VisualizerId = () => {
     const location = useLocation();
     const {initialImage, name} = location.state || {};
+
+    if (!location.state) {
+        return <section><p>This project could not be opened. Please return home and try again.</p><Link to="/">Back to home</Link></section>;
+    }
 
     return(
         <section>
