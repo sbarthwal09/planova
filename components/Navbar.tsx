@@ -50,7 +50,7 @@ const Navbar = () => {
                 <div className="actions">
                     {isSignedIn ? (
                         <>
-                        <span className="greetings">
+                        <span className="greeting">
                             {username ? `Hi, ${username}` : 'Signed in'}
                         </span>
                             <Button size="sm" onClick={handleAuthClick} className="btn">

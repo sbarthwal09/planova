@@ -67,7 +67,7 @@ export default function Home() {
                               src="rendered.png" alt="Project"
                               />
                               <div className="badge">
-                                  <span className="badge">Community</span>
+                                  <span>Community</span>
                               </div>
                           </div>
                           <div className="card-body">
